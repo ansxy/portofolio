@@ -6,8 +6,9 @@ import NavBar from './components/navbar'
 import Hero from './components/hero'
 import Profile from './components/profile'
 import Skills from './components/skill'
+import { motion } from 'framer-motion'
+import Contact from './components/contact'
 
-const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
@@ -21,8 +22,21 @@ export default function Home() {
       <NavBar/>
       <main>
         <Hero/>
-        <Profile/>
-        <Skills/>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.3 }}
+          >
+            <Profile/>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.3 }}
+          >
+          <Skills/>
+        </motion.div>
+        <Contact/>
       </main>
     </>
   )
