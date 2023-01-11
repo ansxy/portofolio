@@ -2,7 +2,8 @@ import Image from "next/image";
 
 export default function Profile() {
   return (
-    <div id="one" className="m-10 h-[48rem] flex">
+    <div id="one" className="m-10 h-[48rem] flex relative">
+            {/* <div className="bg-orange-500 w-full h-[50rem] absolute -z-10"></div> */}
       <section className="flex w-full flex-col items-start">
         <div className="w-full flex">
           <p className="p-5 text-3xl font-bold border-2 border-black text-black bg-white">
@@ -11,11 +12,8 @@ export default function Profile() {
           <div className="border-b-2 border-black w-full"></div>
         </div>
         <div className=" h-full p-10 w-full mt-5 flex">
-          <section className="flex flex-col flex-grow-0 text-black">
-            <p className="text-xl font-medium">
-              Hiiii! I'm Fadil, and i calling my self a Web Developer
-            </p>
-            <p className="w-1/2 font-light text-lg leading-snug">
+          <section className="flex flex-col flex-grow-0 text-black text-3xl ">
+            <p className="w-1/2 font-light leading-snug">
               I am an active student at the Kalimantan Institute of Technology
               majoring in informatics and I am currently in my 6th semester. In
               these 6 semesters I have participated in many workshops and
@@ -23,7 +21,7 @@ export default function Profile() {
               have also made several simple projects to support my portfolio as
               web development you can take a look on my <a target="_blank" href="https://github.com/ansxy" className="font-blod text-orange-600">github</a>.
             </p>
-            <p className="w-1/2 font-light text-lg leading-snug">
+            <p className="w-1/2 font-light leading-snug">
                 Having dreams of becoming an expert in the field of web development, with big dreams comes great sacrifices that make me have to study harder in college and outside of college.
             </p>
           </section>
