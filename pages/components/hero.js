@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Social from "./social";
 export default function Hero() {
   return <div className="m-10 h-[48rem] flex">
     <section className=" w-1/2 p-10 mt-20">
@@ -9,32 +10,7 @@ export default function Hero() {
         <p className="text-3xl font-light leading-snug mt-8 text-black">
             Enthusiastic and motivated undergraduate informatics's student who like reading book,playing chess and learn new things about technology , especially in the field Web Development . Currently actively on research on blockchain in collage.
         </p>
-        <ul className="flex flex-row gap-8 mt-4">
-            <a href="https://github.com/ansxy" className="h-16 rounded-full w-16 relative">
-                <Image
-                    src={'/image/github.svg'}
-                    alt="profile"
-                    fill
-                    
-                />
-            </a>
-            <a href="https://www.linkedin.com/in/ansar-fadillah-a09ba1189/" className="h-16 rounded-full w-16 relative" >
-                <Image
-                    src={'/image/linkedin.svg'}
-                    alt="profile"
-                    fill
-                    
-                />
-            </a>
-            <a href="https://www.instagram.com/ansarfadillah_/" className="h-16 rounded-full w-16 relative">
-                <Image
-                    src={'/image/instagram.svg'}
-                    alt="profile"
-                    fill
-                    
-                />
-            </a>
-        </ul>
+        <Social/>
     </section>
     <section className=" w-1/2 p-10">
         <div className="h-4/5 w-4/6 ml-32 bg-white border-2 border-black flex">
