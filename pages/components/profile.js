@@ -22,7 +22,7 @@ export default function Profile() {
               web development you can take a look on my <a target="_blank" href="https://github.com/ansxy" className="font-blod text-orange-600">github</a>.
             </p>
             <p className="w-1/2 font-light leading-snug">
-                Having dreams of becoming an expert in the field of web development, with big dreams comes great sacrifices that make me have to study harder in college and outside of college.
+                On Web development my mostly focus is on backend development.
             </p>
           </section>
 

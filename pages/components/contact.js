@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { useState } from "react";
+import Social from "./social";
 
 export default function Contact() {
   const [email, setEmail] = useState("");
@@ -106,35 +107,12 @@ export default function Contact() {
               <p className="text-bold text-xl text-black font-medium">
                 Reach Me At
               </p>
-              <ul className="flex flex-row gap-8 mt-4">
-                <a
-                  href="https://github.com/ansxy"
-                  className="h-16 rounded-full w-16 relative "
-                >
-                  <Image src={"/image/github.svg"} alt="profile" fill className="rounded-full hover:bg-orange-700"/>
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/ansar-fadillah-a09ba1189/"
-                  className="h-16 rounded-full w-16 relative"
-                >
-                  <Image src={"/image/linkedin.svg"} alt="profile" fill className="rounded-full hover:bg-orange-700" />
-                </a>
-                <a
-                  href="https://www.instagram.com/ansarfadillah_/"
-                  className="h-16 rounded-full w-16 relative"
-                >
-                  <Image src={"/image/instagram.svg"} alt="profile" fill className="rounded-full hover:bg-orange-700" />
-                </a>
-                <a
-                  href="ansarfadillah20@gmail.com"
-                  className="h-16 rounded-full w-16 relative"
-                >
-                  <Image src={"/image/email.svg"} alt="profile" fill className="rounded-full hover:bg-orange-700" />
-                </a>
-              </ul>
+              <span className="text-black">ansarfadillah20@gmail.com</span>
+              <Social/>
             </div>
           </div>
         </section>
+        <p className="mt-5 text-black">Handracted by me&#169;2022</p>
       </section>
     </div>
   );
