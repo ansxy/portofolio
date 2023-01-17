@@ -1,5 +1,3 @@
-import Image from "next/image";
-import Caraousel from "./caraousel";
 import Card from "./card";
 import project from '../../public/lib/project.json'
 
@@ -22,12 +20,15 @@ export default function Skills() {
           </p>
         </div>
         <div className="grid lg:grid-cols-3 md:grid-cols-2 w-full gap-10">
-        {project.data.map((data) => 
-        {
-          return <Card url={data.url} name={data.name} description={data.description} stack={data.languages}/>
-        })}
+        {!project ? (
+          <></>
+        ) :(
+          project.data.map((data) => 
+          {
+            return <Card url={data.url} name={data.name} description={data.description} stack={data.languages}/>
+          })
+        )}
         </div>
-        {/* <Caraousel/> */}
       </section>
     </div>
   );
