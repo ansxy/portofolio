@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Profile() {
   return (
-    <div id="one" className="m-10 h-[48rem] flex relative">
+    <div id="one" className="m-10 flex relative">
             {/* <div className="bg-orange-500 w-full h-[50rem] absolute -z-10"></div> */}
       <section className="flex w-full flex-col items-start">
         <div className="w-full flex">
@@ -12,21 +12,31 @@ export default function Profile() {
           <div className="border-b-2 border-black w-full"></div>
         </div>
         <div className=" h-full p-10 w-full mt-5 flex">
-          <section className="flex flex-col flex-grow-0 text-black text-3xl ">
+          <section className="flex flex-col flex-grow-0 text-black lg:text-3xl md;text-lg">
             <p className="w-1/2 font-light leading-snug">
               I am an active student at the Kalimantan Institute of Technology
               majoring in informatics and I am currently in my 6th semester. In
               these 6 semesters I have participated in many workshops and
               competitions related to web development. In these 6 semesters I
               have also made several simple projects to support my portfolio as
-              web development you can take a look on my <a target="_blank" href="https://github.com/ansxy" className="font-blod text-orange-600">github</a>.
+              web development.
             </p>
-            <p className="w-1/2 font-light leading-snug">
+            <p className="font-light leading-snug">
                 On Web development my mostly focus is on backend development.
             </p>
+            <p className="mb-5 font-light mt-5">Technologies i'am using </p>
+            <ul className="font-light h-[10rem] flex flex-col flex-wrap">
+              <li>Javascript</li>
+              <li>React</li>
+              <li>Next JS</li>
+              <li>Node JS</li>
+              <li>Express</li>
+              <li>Postgresql</li>
+              <li>Mongodb</li>
+              <li>Express</li>
+            </ul>
           </section>
-
-          <section className="bg-white w-1/2 items-center flex flex-col text-black hover:drop-shadow-[20px_20px_0_rgb(255,110,49,1)] hover:ease-out duration-300">
+          <section className="bg-white w-2/5 items-center flex flex-col text-black hover:drop-shadow-[20px_20px_0_rgb(255,110,49,1)] hover:ease-out duration-300 mb-10">
             <h1 className="font-bold text-lg mt-10">EDUCATION</h1>
             <ul className="flex gap-3 flex-col p-10 flex-grow relative">
               <li className="group/smk hover:bg-orange-500">
