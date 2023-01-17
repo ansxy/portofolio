@@ -1,0 +1,26 @@
+{
+    "data" : [{
+        "name" :  "NFT Document Inspector" , 
+        "description" : "Web3 implementation for make KTP and Surat Kepemilikan Tanah in indonesia to Non Fungible Token (NFT) for more secure and transparency data . This project we created based on what happend in indonesia.",
+        "languages" : ["react","solidity","tailwind","nodejs"],
+        "url" : "https://github.com/ansxy/NFT-Document-Inspector"
+    },
+      {
+        "name" : "Al-Quran Nakama", 
+        "description" : "Al-Quran Nakama is collage project for course Desain Web and this project was created by the group `Tipes Club`",
+        "languages" : ["react","tailwind","nodejs"],
+        "url" : "https://github.com/ansxy/desainweb-nakama"
+    },
+      {
+        "name" : "Meow-Short" , 
+        "description" : "Just casual shorter link without new feature just short some link",
+        "languages" : ["react","css","nodejs","mongodb"],
+        "url" : "https://github.com/ansxy/meow-short"
+    },
+      {
+        "name" : "Ngopeee" , 
+        "description" : "This project created for final project for course `Pengantar aplikasi Bergerak` , Regular Coffee shop app with payment gateway midtrans",
+        "languages" : ["flutter","Postgresql","nodejs"],
+        "url" : "https://github.com/ansxy/ngopeee-final-papb"
+    }]
+}

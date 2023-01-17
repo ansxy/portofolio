@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Caraousel from "./caraousel";
 import Card from "./card";
+import project from '../../public/lib/project.json'
 
 export default function Skills() {
   return (
@@ -17,14 +18,14 @@ export default function Skills() {
         <div className="flex justify-center  mb-10">
           <p className="font-light md:text-lg lg:text-3xl text-center w-1/2 text-black">
             Over the past year I learned a lot of web technologies on client side,
-            server side, database, tools etc here a list project i participated as backend or frontend.
+            server side, database, tools etc . This a list project i participated as backend or frontend.
           </p>
         </div>
         <div className="grid lg:grid-cols-3 md:grid-cols-2 w-full gap-10">
-          <Card name="Daftar"/>
-          <Card/>
-          <Card/>
-          <Card/>
+        {project.data.map((data) => 
+        {
+          return <Card url={data.url} name={data.name} description={data.description} stack={data.languages}/>
+        })}
         </div>
         {/* <Caraousel/> */}
       </section>

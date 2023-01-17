@@ -19,7 +19,7 @@ export default function Profile() {
               these 6 semesters I have participated in many workshops and
               competitions related to web development. In these 6 semesters I
               have also made several simple projects to support my portfolio as
-              web development you can take a look on my <a target="_blank" href="https://github.com/ansxy" className="font-blod text-orange-600">github</a>.
+              web development.
             </p>
             <p className="font-light leading-snug">
                 On Web development my mostly focus is on backend development.
