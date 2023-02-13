@@ -16,7 +16,7 @@ export default function Profile() {
             <p className="w-1/2 font-light leading-snug">
               I am currently an active student pursuing a degree in Informatics at the Kalimantan Institute of Technology, currently in my sixth semester. Throughout my studies, I have been actively involved in various web development workshops and competitions, which have allowed me to expand my skills and knowledge in this field. Additionally, I have developed several simple projects to support my web development portfolio.
             </p>
-            <p className="font-light leading-snug">
+            <p className="w-1/2 font-light leading-snug">
               My primary focus in web development has been on backend development, where I have gained proficiency in a variety of tools and programming languages. I am committed to furthering my expertise in this area and am eager to explore new challenges and opportunities in the field.
             </p>
             <p className="mb-5 font-light mt-5">Technologies i'am using </p>
