@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Profile() {
   return (
     <div id="one" className="m-10 flex relative">
-            {/* <div className="bg-orange-500 w-full h-[50rem] absolute -z-10"></div> */}
+      {/* <div className="bg-orange-500 w-full h-[50rem] absolute -z-10"></div> */}
       <section className="flex w-full flex-col items-start">
         <div className="w-full flex">
           <p className="p-5 text-3xl font-bold border-2 border-black text-black bg-white">
@@ -14,15 +14,10 @@ export default function Profile() {
         <div className=" h-full p-10 w-full mt-5 flex">
           <section className="flex flex-col flex-grow-0 text-black lg:text-3xl md;text-lg">
             <p className="w-1/2 font-light leading-snug">
-              I am an active student at the Kalimantan Institute of Technology
-              majoring in informatics and I am currently in my 6th semester. In
-              these 6 semesters I have participated in many workshops and
-              competitions related to web development. In these 6 semesters I
-              have also made several simple projects to support my portfolio as
-              web development.
+              I am currently an active student pursuing a degree in Informatics at the Kalimantan Institute of Technology, currently in my sixth semester. Throughout my studies, I have been actively involved in various web development workshops and competitions, which have allowed me to expand my skills and knowledge in this field. Additionally, I have developed several simple projects to support my web development portfolio.
             </p>
             <p className="font-light leading-snug">
-                On Web development my mostly focus is on backend development.
+              My primary focus in web development has been on backend development, where I have gained proficiency in a variety of tools and programming languages. I am committed to furthering my expertise in this area and am eager to explore new challenges and opportunities in the field.
             </p>
             <p className="mb-5 font-light mt-5">Technologies i'am using </p>
             <ul className="font-light h-[10rem] flex flex-col flex-wrap">
