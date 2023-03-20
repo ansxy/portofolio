@@ -1,0 +1,9 @@
+version: '1'
+services:
+  app:
+    build:
+      context: ./
+    volumes:
+      - .:/app
+    ports:
+      - "3000:3000"

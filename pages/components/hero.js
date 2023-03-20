@@ -13,11 +13,12 @@ export default function Hero() {
         <Social/>
     </section>
     <section className=" w-1/2 p-10 md:w-full md:h-full">
-        <div className="lg:h-4/5 lg:w-3/4 lg:ml-32 bg-white border-2 border-black flex md:h-full md:w-2/5 md:ml-0">
+        <div className="lg:h-4/5 lg:w-[60%] lg:ml-32 bg-white border-2 border-black flex md:h-full md:w-2/5 md:ml-0">
             <div className="bg-slate-500 flex flex-grow h-full relative ">
                 <Image
-                    src={'/image/2.jpg'}
+                    src="https://storage.googleapis.com/portofolio/ansar.png"
                     alt="profile"
+                    quality={100}
                     fill
                     
                 />
