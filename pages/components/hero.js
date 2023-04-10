@@ -16,7 +16,7 @@ export default function Hero() {
         <div className="lg:h-4/5 lg:w-[60%] lg:ml-32 bg-white border-2 border-black flex md:h-full md:w-2/5 md:ml-0">
             <div className="bg-slate-500 flex flex-grow h-full relative ">
                 <Image
-                    src="https://storage.googleapis.com/portofolio/ansar.png"
+                    src={'/image/2.jpg'}
                     alt="profile"
                     quality={100}
                     fill
