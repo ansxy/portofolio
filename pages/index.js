@@ -17,7 +17,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <NavBar/>
-      <main>
+      <main className='flex flex-col font-fireCodeode'>
         <Hero/>
         <motion.div
           initial={{ opacity: 0 }}
