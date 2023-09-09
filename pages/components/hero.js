@@ -38,7 +38,7 @@ export default function Hero() {
         <p className="w-1/2 text-sm font-light leading-snug text-black md:text-lg lg:text-xl">
             Enthusiastic and Versatile undergraduate informatics's student. Who passionate in web development as Front-end or Back-end.
         </p>
-        <button className="bg-[#fed000]  hover:text-white text-black rounded-sm font-extrabold md:text-xl border-2 transition ease-in-out duration-150 border-black drop-shadow-[10px_10px_0_rgb(0,0,0,255)] hover:drop-shadow-[0px_0px_0_rgb(0,0,0,255)] p-5">Send Me Mail</button>
+        <a href="mailto:ansarfadillah20@gmail.com" className="bg-[#fed000]  hover:text-white text-black rounded-sm font-extrabold md:text-xl border-2 transition ease-in-out duration-150 border-black drop-shadow-[10px_10px_0_rgb(0,0,0,255)] hover:drop-shadow-[0px_0px_0_rgb(0,0,0,255)] p-5">Send Me Mail</a>
         <Social/>
     </section>
   </div>;
