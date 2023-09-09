@@ -17,38 +17,42 @@ export default function NavBar() {
   
   return (
     <nav
-      className={`border-b-2 top-0 sticky z-10 border-black text-black font-bold text-2xl transition ease-in ${
-        isScrolled ? "bg-white" : "bg-transparent"
-      }`}
+      className={`hidden  top-[30%] fixed z-10 text-black font-medium md:text-xl transition ease-in text-sm md:flex justify-center`}
     >
       <ul
-        className={`flex transition ease-in-out duration-1000  ${
-          isScrolled ? "flex-row" : "flex-row-reverse"
-        } `}
+        className={`flex transition ease-in-out duration-1000 gap-6 flex-col-reverse`}
       >
         <a
           href="#three"
-          className={` hover:bg-orange-600 transition ease-in ${
-            isScrolled ? "p-5" : "p-10"
+          className={` hover:bg-[#fed000] transition ease-in p-2 hover:opacity-100 ${
+            isScrolled && "opacity-50"
           }`}
         >
           Contact
         </a>
         <a
           href="#two"
-          className={` hover:bg-orange-600 transition ease-in ${
-            isScrolled ? "p-5" : "p-10"
+          className={` hover:bg-[#fed000] transition ease-in p-2 hover:opacity-100 ${
+            isScrolled && "opacity-50"
           }`}
         >
-          Skill
+          Project
         </a>
         <a
           href="#one"
-          className={` hover:bg-orange-600 transition ease-in ${
-            isScrolled ? "p-5" : "p-10"
+          className={` hover:bg-[#fed000] transition ease-in p-2 hover:opacity-100 tracking-tighter ${
+            isScrolled && "opacity-50"
           }`}
         >
-          Profile
+          About Me
+        </a>
+        <a
+          href="#one"
+          className={` hover:bg-[#fed000] transition ease-in p-2 hover:opacity-100 tracking-tighter ${
+            isScrolled && "opacity-50"
+          }`}
+        >
+          Hey There
         </a>
       </ul>
     </nav>
