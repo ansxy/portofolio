@@ -3,25 +3,29 @@
         "name" :  "NFT Document Inspector" , 
         "description" : "Web3 implementation for make KTP and Surat Kepemilikan Tanah in indonesia to Non Fungible Token (NFT) for more secure and transparency data . This project we created based on what happend in indonesia.",
         "languages" : ["react","solidity","tailwind","nodejs"],
-        "url" : "https://github.com/ansxy/NFT-Document-Inspector"
+        "url" : "https://github.com/ansxy/NFT-Document-Inspector",
+        "icon" : "robot"
     },
       {
         "name" : "Al-Quran Nakama", 
         "description" : "Al-Quran Nakama is collage project for course Desain Web and this project was created by the group `Tipes Club`",
         "languages" : ["react","tailwind","nodejs"],
-        "url" : "https://github.com/ansxy/desainweb-nakama"
+        "url" : "https://github.com/ansxy/desainweb-nakama",
+        "icon" : "islam"
     },
     {
       "name" : "NagaBelajar" , 
       "description" : "Platform to learn basic programing like an python,javascript and SQL . the feature provide an sandbox code editor with realtime terminal, it works with using child process from node then stream it to client side with socket.io then for the UI using the xterm js.",
       "languages" : ["typescript","javascript","nodejs","express","vite","firebase"],
-      "url" : "https://nagabelajar.com"
+      "url" : "https://nagabelajar.com",
+      "icon" : "naga"
   },
     {
       "name" : "Vistr: Bangkit Capstone" , 
       "description" : "Vistr is capstone project for bangkit, Vistr is tourism app for make an plane based what they want using a Machine learing to give an recomendation to user based their personality choice",
       "languages" : ["Python","Express","Flask","GCP"],
-      "url" : "https://github.com/Bangkit-C23-PS456"
+      "url" : "https://github.com/Bangkit-C23-PS456",
+      "icon" : "vistr"
   }
   ]
 }

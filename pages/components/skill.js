@@ -19,13 +19,13 @@ export default function Skills() {
             server side, database, tools etc . This a list project i participated as backend or frontend.
           </p>
         </div>
-        <div className=" grid lg:grid-cols-3 md:grid-cols-2 w-[80%] gap-10 grid-cols-1 grid-flow-row ">
+        <div className=" grid lg:grid-cols-3 md:grid-cols-2 w-[80%] gap-10 grid-cols-1 grid-flow-row mt-10">
         {!project ? (
           <></>
         ) :(
           project.data.map((data) => 
           {
-            return <Card url={data.url} name={data.name} description={data.description} stack={data.languages}/>
+            return <Card url={data.url} name={data.name} description={data.description} stack={data.languages} icon={data.icon}/>
           })
         )}
         </div>
