@@ -2,36 +2,64 @@ import Image from "next/image";
 
 export default function Profile() {
   return (
-    <div id="one" className="m-10 flex relative">
+    <div id="one" className="flex relative">
       {/* <div className="bg-orange-500 w-full h-[50rem] absolute -z-10"></div> */}
-      <section className="flex w-full flex-col items-start">
-        <div className="w-full flex">
-          <p className="p-5 text-3xl font-bold border-2 border-black text-black bg-white">
-            PROFILE
+      <section className="flex w-full flex-col items-center bg-[#fed000]">
+        <div className="w-full flex flex-wrap  bg-white">
+          <p className="p-5 text-3xl font-bold border-r-2 border-t-2 border-black text-black bg-white">
+            ABOUT ME
           </p>
           <div className="border-b-2 border-black w-full"></div>
         </div>
-        <div className=" h-full p-10 w-full mt-5 flex">
-          <section className="flex flex-col flex-grow-0 text-black lg:text-3xl md;text-lg">
-            <p className="w-1/2 font-light leading-snug">
-              I am currently an active student pursuing a degree in Informatics at the Kalimantan Institute of Technology, currently in my sixth semester. Throughout my studies, I have been actively involved in various web development workshops and competitions, which have allowed me to expand my skills and knowledge in this field. Additionally, I have developed several simple projects to support my web development portfolio.
+        <div className=" h-full p-10 md:w-3/5 mt-5 flex w-full relative ">
+          <section className="flex flex-col flex-grow-0 text-black md:text-lg ">
+            <p className="font-light leading-snug">
+              I am currently an active student pursuing a Bachelor's degree in Informatics at the Kalimantan Institute of Technology, currently in my seventh semester. Graduated from the Bangkit Academy program in the Cloud Computing pathway and Certified as an Associate Cloud Engineer by Google. Occasionally do front-end too my diverse knowladge make me an understand little more than just backend. Beside all of that i have human side too, sometime on my free time i listen music, reading book or just playing with my cat, i have cat his name Muhammad Asyncrounous or <span className="relative  group">
+                <span className=" transition duration-300 ease-in-out ">ACENG</span>
+                <span className="absolute hidden h-[15rem] w-[15rem] bg-white rounded-lg shadow-lg -left-1/2 transform translate-x-1/2 group-hover:block">
+                  <Image
+                      src={'/image/Aceng.png'}
+                      alt="profile"
+                      fill
+                      className="bg-clip-content"
+                  />
+                </span></span> i don't know what type cat he is but i'm sure he that type make everyone happy when see him.
             </p>
-            <p className="w-1/2 font-light leading-snug">
-              My primary focus in web development has been on backend development, where I have gained proficiency in a variety of tools and programming languages. I am committed to furthering my expertise in this area and am eager to explore new challenges and opportunities in the field.
-            </p>
-            <p className="mb-5 font-light mt-5">Technologies i'am using </p>
-            <ul className="font-light h-[10rem] flex flex-col flex-wrap">
-              <li>Javascript</li>
-              <li>React</li>
-              <li>Next JS</li>
-              <li>Node JS</li>
-              <li>Express</li>
-              <li>Postgresql</li>
-              <li>Mongodb</li>
-              <li>Express</li>
-            </ul>
+            <p className="mb-5 font-light mt-5">Technologies i'am using for backend i usually using node js for the REST API and google cloud product for deploying it and for frontend i using vite,react vanilla, and next js.</p>
+            <span className="absolute w-24 h-24 -left-10  md:-left-16 -rotate-45 hidden md:flex ">
+                <Image
+                    src={'/image/4.png'}
+                    alt="profile"
+                    fill
+                    className="bg-clip-content"
+                />
+            </span>
+            <span className="absolute w-24 h-24 -left-10 top-36  md:-left-16 -rotate-45 hidden md:flex ">
+                <Image
+                    src={'/image/party.png'}
+                    alt="profile"
+                    fill
+                    className="bg-clip-content"
+                />
+            </span>
+            <span className="absolute w-24 h-24 -left-10 top-64  md:-left-16  hidden md:flex ">
+                <Image
+                    src={'/image/mac.png'}
+                    alt="profile"
+                    fill
+                    className="bg-clip-content"
+                />
+            </span>
+            <span className="absolute z-10  w-48 h-[30rem] -top-45 -right-40  hidden md:flex ">
+              <Image
+                  src={"/image/kuliah.svg"}
+                  alt="profile"
+                  fill
+                  className="bg-clip-content"
+                />
+            </span>
           </section>
-          <section className="bg-white w-2/5 items-center flex flex-col text-black hover:drop-shadow-[20px_20px_0_rgb(255,110,49,1)] hover:ease-out duration-300 mb-10">
+          {/* <section className="bg-white w-2/5 items-center flex flex-col text-black hover:drop-shadow-[20px_20px_0_rgb(255,110,49,1)] hover:ease-out duration-300 mb-10">
             <h1 className="font-bold text-lg mt-10">EDUCATION</h1>
             <ul className="flex gap-3 flex-col p-10 flex-grow relative">
               <li className="group/smk hover:bg-orange-500">
@@ -80,7 +108,7 @@ export default function Profile() {
                 />
               </li>
             </ul>
-          </section>
+          </section> */}
         </div>
       </section>
     </div>
