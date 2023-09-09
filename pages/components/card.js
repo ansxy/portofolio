@@ -1,10 +1,10 @@
 export default function Card({ url, name, stack,description }) {
   return (
-    <div key={name} className="last:col-start-2 p-10 bg-white border-2 transition ease-in-out duration-150 border-black drop-shadow-[10px_10px_0_rgb(0,0,0,255)] hover:drop-shadow-[0px_0px_0_rgb(0,0,0,255)] ">
+    <div key={name} className="md:last:col-start-2 md:p-10 p-8 bg-white border-2 transition ease-in-out duration-150 border-black drop-shadow-[10px_10px_0_rgb(0,0,0,255)] hover:drop-shadow-[0px_0px_0_rgb(0,0,0,255)] ">
       <section className="w-full flex justify-center">
         <a  target="_blank" href={url} className="text-black text-lg font-medium">{name}</a>
       </section>
-      <section className="mt-4">
+      <section className="mt-4 max-h-[10rem] md:max-h-[10rem] md:min-h-[10rem] text-ellipsis overflow-hidden hover:max-h-[20rem]">
         <p className="font-light text-black">             
             {description}
         </p>
