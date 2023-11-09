@@ -14,7 +14,7 @@ export default function Profile() {
         <div className=" h-full p-10 md:w-3/5 mt-5 flex w-full relative ">
           <section className="flex flex-col flex-grow-0 text-black md:text-lg ">
             <p className="font-light leading-snug">
-              I am currently an active student pursuing a Bachelor's degree in Informatics at the Kalimantan Institute of Technology, currently in my seventh semester. Graduated from the Bangkit Academy program in the Cloud Computing pathway and Certified as an Associate Cloud Engineer by Google. Occasionally do front-end too my diverse knowladge make me an understand little more than just backend. Beside all of that i have human side too, sometime on my free time i listen music, reading book or just playing with my cat, i have cat his name Muhammad Asyncrounous or <span className="relative  group">
+              I am currently an active student pursuing a Bachelor's degree in Informatics at the Kalimantan Institute of Technology, currently in my seventh semester. Graduated from the Bangkit Academy program in the Cloud Computing pathway. Occasionally do front-end too my diverse knowladge make me an understand little more than just backend. Beside all of that i have human side too, sometime on my free time i listen music, reading book or just playing with my cat, i have cat his name Muhammad Asyncrounous or <span className="relative  group">
                 <span className=" transition duration-300 ease-in-out ">ACENG</span>
                 <span className="absolute hidden h-[15rem] w-[15rem] bg-white rounded-lg shadow-lg -left-1/2 -top-64 group-hover:block">
                   <Image
