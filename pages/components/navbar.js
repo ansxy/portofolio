@@ -12,18 +12,18 @@ export default function NavBar() {
   };
 
   useEffect(() => {
-      window.addEventListener("scroll", changeNavbarColor);
-  }, [])
-  
+    window.addEventListener("scroll", changeNavbarColor);
+  }, []);
+
   return (
     <nav
-      className={`hidden  top-[30%] fixed z-10 text-black font-medium md:text-xl transition ease-in text-sm md:flex justify-center`}
+      className={`hidden top-[35%] fixed z-10 text-black font-medium md:text-xl transition ease-in text-sm md:flex`}
     >
       <ul
         className={`flex transition ease-in-out duration-1000 gap-6 flex-col-reverse`}
       >
         <a
-          href="#three"
+          href="#four"
           className={` hover:bg-[#fed000] transition ease-in p-2 hover:opacity-100 ${
             isScrolled && "opacity-50"
           }`}
@@ -31,7 +31,7 @@ export default function NavBar() {
           Contact
         </a>
         <a
-          href="#two"
+          href="#three"
           className={` hover:bg-[#fed000] transition ease-in p-2 hover:opacity-100 ${
             isScrolled && "opacity-50"
           }`}
@@ -39,7 +39,7 @@ export default function NavBar() {
           Project
         </a>
         <a
-          href="#one"
+          href="#two"
           className={` hover:bg-[#fed000] transition ease-in p-2 hover:opacity-100 tracking-tighter ${
             isScrolled && "opacity-50"
           }`}
