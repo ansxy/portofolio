@@ -36,9 +36,11 @@ export default function Hero() {
             </span>
           </p>
         </h1>
-        <p className="w-1/2 text-sm font-light leading-snug text-black md:text-lg lg:text-xl">
-          Enthusiastic and Versatile undergraduate informatics's student. Who
-          passionate in web development as Front-end or Back-end.
+        <p className="w-1/2 text-sm font-light leading-snug text-black md:text-lg lg:text-xl flex flex-col">
+          Enthusiastic and Versatile fresh graduate informatics's.
+          <span>
+            Who passionate in web development as Front-end or Back-end.
+          </span>
         </p>
         <a
           href="mailto:ansarfadillah20@gmail.com"
