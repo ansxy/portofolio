@@ -1,11 +1,10 @@
-import Head from 'next/head'
-import NavBar from './components/navbar'
-import Hero from './components/hero'
-import Profile from './components/profile'
-import Skills from './components/skill'
-import { motion } from 'framer-motion'
-import Contact from './components/contact'
-
+import { motion } from "framer-motion";
+import Head from "next/head";
+import Contact from "./components/contact";
+import Hero from "./components/hero";
+import NavBar from "./components/navbar";
+import Profile from "./components/profile";
+import Skills from "./components/skill";
 
 export default function Home() {
   return (
@@ -16,25 +15,25 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <NavBar/>
-      <main className='flex flex-col font-fireCodeode'>
-        <Hero/>
+      <NavBar />
+      <main className="flex flex-col font-fireCodeode">
+        <Hero />
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
-          >
-            <Profile/>
+        >
+          <Profile />
         </motion.div>
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
-          >
-          <Skills/>
+        >
+          <Skills />
         </motion.div>
-        <Contact/>
+        <Contact />
       </main>
     </>
-  )
+  );
 }

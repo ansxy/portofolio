@@ -16,7 +16,7 @@
     {
       "name" : "NagaBelajar" , 
       "description" : "Platform to learn basic programing like an python,javascript and SQL . the feature provide an sandbox code editor with realtime terminal, it works with using child process from node then stream it to client side with socket.io then for the UI using the xterm js.",
-      "languages" : ["typescript","javascript","nodejs","express","vite","firebase"],
+      "languages" : ["typescript","Go","Express","Vite","Firebase", "AWS S3"],
       "url" : "https://nagabelajar.com",
       "icon" : "naga"
   },
@@ -26,6 +26,22 @@
       "languages" : ["Python","Express","Flask","GCP"],
       "url" : "https://github.com/Bangkit-C23-PS456",
       "icon" : "vistr"
+  } ,
+  {
+    "name" : "Survey App For Balikpapan City" ,
+    "description" : "Survey app for balikpapan city to get the data about the buisness in balikpapan city, for survey the market on balikpapan city.",
+    "languages" : ["Laravel", "React"],
+    "url" : "https://survey.sistemsaya.com/",
+    "icon" : "vistr"
   }
+  ,
+  {
+    "name" : "Goods Bank Charity API" ,
+    "description" : "Create an RESTFul Api for Goods Bank Charity, this project was created for the charity organization to manage the goods that they have and the goods that they need. This Project was created at my time on the internship at https://www.elemes.id/",
+    "languages" : ["GO"],
+    "url" : "https://www.lionsgoodbank.or.id/",
+    "icon" : "robot"
+  }
+
   ]
 }
