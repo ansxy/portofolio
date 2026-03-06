@@ -5,8 +5,7 @@ export default function About() {
       <div className="about-grid">
         <div className="about-summary">
           <p className="text-body">
-            Backend developer specializing in designing and delivering
-            high-performance server infrastructure. Proficient in{" "}
+            Backend developer specializing in designing. Proficient in{" "}
             <strong>Node.js (Express)</strong> and <strong>Go</strong>, with
             hands-on experience across multiple Go frameworks including Chi,
             Fiber, and Gin. Applies production-grade{" "}
