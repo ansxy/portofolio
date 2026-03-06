@@ -1,0 +1,959 @@
+/**
+ * Style Guide - Editorial Portfolio Design
+ * ========================================
+ * A comprehensive style system for a minimalist, editorial-inspired portfolio.
+ * This guide provides reusable CSS custom properties and utility classes.
+ */
+
+/* ==========================================================================
+   1. CSS CUSTOM PROPERTIES (Design Tokens)
+   ========================================================================== */
+
+:root {
+  /* Color Palette */
+  --color-ink: #0e0e0e;
+  --color-paper: #f5f0e8;
+  --color-accent: #c8441b;
+  --color-muted: #7a7060;
+  --color-border: #d9d0be;
+  --color-white: #fcfaf7;
+  
+  /* Code Block Colors */
+  --color-code-bg: #1a1a1a;
+  --color-code-fg: #e8d5a3;
+  --color-code-comment: #5a5a5a;
+  --color-code-bracket: #888888;
+  
+  /* Typography - Font Families */
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-mono: 'DM Mono', monospace;
+  
+  /* Typography - Font Sizes */
+  --text-xs: 0.65rem;
+  --text-sm: 0.75rem;
+  --text-base: 1rem;
+  --text-lg: 1.05rem;
+  --text-xl: 1.15rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 2rem;
+  --text-4xl: clamp(2.8rem, 6vw, 4.5rem);
+  
+  /* Spacing Scale */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-14: 3.5rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  
+  /* Border Radius */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.8s ease;
+  
+  /* Shadows */
+  --shadow-card: 4px 4px 0 var(--color-border);
+  
+  /* Container */
+  --container-max-width: 780px;
+  --container-padding: 2rem;
+}
+
+/* ==========================================================================
+   2. BASE STYLES
+   ========================================================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-weight: 300;
+  line-height: 1.7;
+  min-height: 100vh;
+}
+
+/* Grain Overlay Effect */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0.6;
+}
+
+/* ==========================================================================
+   3. LAYOUT COMPONENTS
+   ========================================================================== */
+
+/* Container */
+.container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+/* Section */
+.section {
+  padding: var(--space-14) 0;
+  border-bottom: 1px solid var(--color-border);
+  animation: fadeUp var(--transition-slow) both;
+}
+
+.section:nth-child(2) { animation-delay: 0.1s; }
+.section:nth-child(3) { animation-delay: 0.2s; }
+.section:nth-child(4) { animation-delay: 0.3s; }
+.section:nth-child(5) { animation-delay: 0.4s; }
+
+/* ==========================================================================
+   4. TYPOGRAPHY COMPONENTS
+   ========================================================================== */
+
+/* Eyebrow Text (Small Label Above Headings) */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: var(--space-4);
+}
+
+/* Section Label */
+.section-label {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: var(--space-6);
+}
+
+/* Display Heading (h1) */
+.heading-display {
+  font-family: var(--font-display);
+  font-size: var(--text-4xl);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--color-ink);
+  margin-bottom: var(--space-2);
+}
+
+/* Section Heading (h2, h3) */
+.heading-section {
+  font-family: var(--font-display);
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: var(--color-ink);
+  margin-bottom: var(--space-3);
+}
+
+/* Tagline */
+.tagline {
+  font-size: var(--text-xl);
+  color: var(--color-muted);
+  font-weight: 300;
+  max-width: 540px;
+  line-height: 1.6;
+}
+
+/* Body Text */
+.text-body {
+  font-size: var(--text-lg);
+  line-height: 1.85;
+  color: #2a2a2a;
+  max-width: 660px;
+}
+
+.text-body strong {
+  font-weight: 500;
+  color: var(--color-ink);
+}
+
+/* Muted Text */
+.text-muted {
+  color: var(--color-muted);
+  font-size: 0.88rem;
+}
+
+/* ==========================================================================
+   5. TAG & BADGE COMPONENTS
+   ========================================================================== */
+
+/* Role Tag (Dark Background) */
+.role-tag {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  background: var(--color-ink);
+  color: var(--color-paper);
+  padding: 0.3em 0.9em;
+  border-radius: var(--radius-sm);
+  letter-spacing: 0.1em;
+}
+
+/* Years Badge (Light/Outline) */
+.years-badge {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  border: 1px solid var(--color-border);
+  padding: 0.3em 0.9em;
+  border-radius: var(--radius-sm);
+}
+
+/* Title Line Container */
+.title-line {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin: 1.2rem 0 1.8rem;
+  flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   6. PILL COMPONENTS
+   ========================================================================== */
+
+/* Tech Pills Container */
+.tech-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.8rem;
+}
+
+/* Pill Base */
+.pill {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  background: var(--color-paper);
+  border: 1px solid var(--color-border);
+  color: var(--color-ink);
+  padding: 0.2em 0.65em;
+  border-radius: var(--radius-sm);
+  letter-spacing: 0.05em;
+}
+
+/* Primary Pill (Filled) */
+.pill-primary {
+  background: var(--color-ink);
+  color: var(--color-paper);
+  border-color: var(--color-ink);
+}
+
+/* ==========================================================================
+   7. CARD COMPONENTS
+   ========================================================================== */
+
+/* Skills Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+}
+
+@media (max-width: 600px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Skill Card */
+.skill-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  padding: var(--space-6);
+  position: relative;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.skill-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card);
+}
+
+/* Skill Card Label */
+.skill-card-label {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin-bottom: 0.8rem;
+}
+
+/* ==========================================================================
+   8. CODE BLOCK COMPONENT
+   ========================================================================== */
+
+.stack-block {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  color: var(--color-ink);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  padding: 1.8rem 2rem;
+  line-height: 2;
+  border-radius: var(--radius-sm);
+  margin-top: var(--space-2);
+  overflow-x: auto;
+}
+
+.stack-block .comment { color: var(--color-muted); }
+.stack-block .key { color: var(--color-accent); }
+.stack-block .val { color: var(--color-ink); }
+.stack-block .bracket { color: var(--color-muted); }
+
+/* ==========================================================================
+   9. EDUCATION COMPONENT
+   ========================================================================== */
+
+.edu-block {
+  display: flex;
+  gap: var(--space-8);
+  align-items: flex-start;
+}
+
+.edu-year {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--color-muted);
+  white-space: nowrap;
+  padding-top: 0.15rem;
+  min-width: 90px;
+}
+
+.edu-content h3 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-ink);
+  margin-bottom: var(--space-1);
+}
+
+.edu-content p {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   10. FOOTER COMPONENT
+   ========================================================================== */
+
+.footer {
+  padding: var(--space-10) 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-muted);
+  letter-spacing: 0.1em;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.footer .dot {
+  width: 5px;
+  height: 5px;
+  background: var(--color-accent);
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 var(--space-2);
+}
+
+/* ==========================================================================
+   11. ANIMATIONS
+   ========================================================================== */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeUp {
+  animation: fadeUp var(--transition-slow) both;
+}
+
+/* ==========================================================================
+   12. HERO IMAGE
+   ========================================================================== */
+
+.hero-header {
+  position: relative;
+}
+
+.name-wrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.name-wrapper .heading-display {
+  margin-bottom: 0;
+}
+
+.peace-image {
+  filter: drop-shadow(2px 2px 0 var(--color-border));
+  flex-shrink: 0;
+  animation: wave 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes wave {
+  0%, 20% {
+    transform: rotate(10deg);
+  }
+  25% {
+    transform: rotate(25deg) scale(1.05);
+  }
+  30% {
+    transform: rotate(10deg);
+  }
+  35% {
+    transform: rotate(25deg) scale(1.05);
+  }
+  40%, 100% {
+    transform: rotate(10deg);
+  }
+}
+
+@media (max-width: 600px) {
+  .name-wrapper {
+    flex-wrap: wrap;
+  }
+  
+  .peace-image {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* Animation Delay Utilities */
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.delay-4 { animation-delay: 0.4s; }
+.delay-5 { animation-delay: 0.5s; }
+
+/* ==========================================================================
+   12. SOCIAL LINKS
+   ========================================================================== */
+
+.social-links {
+  display: flex;
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+}
+
+.social-link {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+  border-bottom: 1px solid transparent;
+}
+
+.social-link:hover {
+  color: var(--color-accent);
+  border-bottom-color: var(--color-accent);
+}
+
+/* ==========================================================================
+   13. PROJECT CARDS
+   ========================================================================== */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-6);
+}
+
+@media (max-width: 600px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  padding: var(--space-6);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.project-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card);
+}
+
+.project-card-title {
+  font-family: var(--font-display);
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: var(--color-ink);
+  text-decoration: none;
+  display: block;
+  margin-bottom: var(--space-2);
+}
+
+.project-card-title:hover {
+  color: var(--color-accent);
+}
+
+.project-card-desc {
+  font-size: 0.88rem;
+  color: var(--color-muted);
+  line-height: 1.6;
+  margin-bottom: var(--space-4);
+}
+
+/* ==========================================================================
+   14. RESPONSIVE UTILITIES
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  :root {
+    --container-padding: 1.5rem;
+  }
+  
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .edu-block {
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+}
+
+/* ==========================================================================
+   15. STATUS BADGE (Open to Work)
+   ========================================================================== */
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #166534;
+  background: #dcfce7;
+  border: 1px solid #86efac;
+  padding: 0.4em 1em;
+  border-radius: 20px;
+  margin-bottom: var(--space-4);
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background: #22c55e;
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.1); }
+}
+
+/* ==========================================================================
+   16. CONTACT SECTION
+   ========================================================================== */
+
+.contact-content {
+  max-width: 540px;
+}
+
+.contact-email {
+  margin-bottom: var(--space-4);
+}
+
+.email-link {
+  display: inline;
+  width: fit-content;
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  color: var(--color-ink);
+  text-decoration: none;
+  border-bottom: 2px solid var(--color-accent);
+  padding-bottom: 2px;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.email-link:hover {
+  color: var(--color-accent);
+}
+
+/* ==========================================================================
+   17. ITK BADGE & TOOLTIP
+   ========================================================================== */
+
+.itk-badge {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  border: 1px solid var(--color-border);
+  padding: 0.3em 0.9em;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.itk-badge:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  background: rgba(200, 68, 27, 0.05);
+}
+
+.itk-badge-icon {
+  font-size: 0.9rem;
+}
+
+.itk-tooltip {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  width: 280px;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.2rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.25s ease;
+  z-index: 100;
+}
+
+/* Arrow */
+.itk-tooltip::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 12px;
+  height: 12px;
+  background: var(--color-white);
+  border-left: 1px solid var(--color-border);
+  border-top: 1px solid var(--color-border);
+}
+
+.itk-badge:hover .itk-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.itk-tooltip-header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.itk-tooltip-logo {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--color-white);
+  background: #1e40af;
+  padding: 0.3em 0.6em;
+  border-radius: var(--radius-sm);
+}
+
+.itk-tooltip-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--color-ink);
+}
+
+.itk-tooltip-desc {
+  font-size: 0.82rem;
+  color: var(--color-muted);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.itk-tooltip-link {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--transition-fast);
+}
+
+.itk-tooltip-link:hover {
+  border-bottom-color: var(--color-accent);
+}
+
+@media (max-width: 600px) {
+  .itk-tooltip {
+    left: 0;
+    transform: translateX(0) translateY(10px);
+  }
+  
+  .itk-badge:hover .itk-tooltip {
+    transform: translateX(0) translateY(0);
+  }
+  
+  .itk-tooltip::before {
+    left: 20%;
+  }
+}
+
+/* ==========================================================================
+   18. EXPERIENCE SECTION (Timeline Style)
+   ========================================================================== */
+
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+  padding-left: 2rem;
+}
+
+/* Vertical timeline line */
+.experience-list::before {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    var(--color-accent) 0%,
+    var(--color-border) 100%
+  );
+}
+
+.experience-item {
+  padding-bottom: var(--space-8);
+  position: relative;
+}
+
+.experience-item:last-child {
+  padding-bottom: 0;
+}
+
+/* Timeline dot */
+.experience-item::before {
+  content: '';
+  position: absolute;
+  left: -2rem;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  background: var(--color-paper);
+  border: 2px solid var(--color-accent);
+  border-radius: 50%;
+  z-index: 1;
+  transition: all var(--transition-fast);
+}
+
+/* First item - filled dot */
+.experience-item:first-child::before {
+  background: var(--color-accent);
+  box-shadow: 0 0 0 4px rgba(200, 68, 27, 0.15);
+}
+
+/* Hover effect on dots */
+.experience-item:hover::before {
+  background: var(--color-accent);
+  transform: scale(1.2);
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-4);
+  margin-bottom: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.experience-info {
+  flex: 1;
+}
+
+.experience-role {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-ink);
+  margin-bottom: var(--space-1);
+}
+
+.experience-company {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--color-accent);
+  letter-spacing: 0.02em;
+}
+
+.experience-period {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--color-muted);
+  white-space: nowrap;
+  background: var(--color-paper);
+  border: 1px solid var(--color-border);
+  padding: 0.3em 0.8em;
+  border-radius: var(--radius-sm);
+}
+
+.experience-highlights {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.experience-highlights li {
+  position: relative;
+  padding-left: 1.2rem;
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  line-height: 1.7;
+  margin-bottom: var(--space-2);
+}
+
+.experience-highlights li:last-child {
+  margin-bottom: 0;
+}
+
+.experience-highlights li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  font-size: 0.8rem;
+}
+
+@media (max-width: 600px) {
+  .experience-list {
+    padding-left: 1.5rem;
+  }
+  
+  .experience-item::before {
+    left: -1.5rem;
+    width: 10px;
+    height: 10px;
+  }
+  
+  .experience-header {
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+  
+  .experience-period {
+    align-self: flex-start;
+  }
+}
+
+/* ==========================================================================
+   19. MERGED LAYOUTS
+   ========================================================================== */
+
+/* About Section (Summary + Tech Stack) */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8);
+  align-items: start;
+}
+
+.about-summary {
+  padding-right: var(--space-4);
+}
+
+.about-stack .stack-block {
+  margin-top: 0;
+  height: 100%;
+}
+
+/* Bottom Section (Education + Contact) */
+.bottom-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-10);
+}
+
+.bottom-block .section-label {
+  margin-bottom: var(--space-4);
+}
+
+.bottom-block .edu-block {
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.contact-compact {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.contact-compact .email-link {
+  font-size: 1rem;
+}
+
+.contact-compact .social-links {
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+  
+  .about-summary {
+    padding-right: 0;
+  }
+  
+  .bottom-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+}
