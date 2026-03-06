@@ -1,43 +1,76 @@
-import project from "../../public/lib/project.json";
-import Card from "./card";
+const skillsData = [
+  {
+    label: "Primary",
+    title: "Backend Engineering",
+    description:
+      "Design and development of scalable, maintainable server-side systems and RESTful APIs.",
+    primaryPills: ["Node.js", "Go"],
+    secondaryPills: ["Express", "REST APIs"],
+  },
+  {
+    label: "Frameworks",
+    title: "Go Ecosystem",
+    description:
+      "Multi-framework experience enabling flexibility across different project architectures and requirements.",
+    primaryPills: ["Chi", "Fiber", "Gin"],
+    secondaryPills: [],
+  },
+  {
+    label: "Observability",
+    title: "Monitoring & Debugging",
+    description:
+      "Hands-on experience with application performance monitoring, logging pipelines, and distributed tracing in production environments.",
+    primaryPills: ["APM Tools", "Logging"],
+    secondaryPills: ["Tracing", "Metrics"],
+  },
+  {
+    label: "Supplementary",
+    title: "Frontend Integration",
+    description:
+      "Working knowledge of modern frontend tooling to support full-stack collaboration and end-to-end delivery.",
+    primaryPills: ["React", "Vite"],
+    secondaryPills: [],
+  },
+];
+
+function SkillCard({ label, title, description, primaryPills, secondaryPills }) {
+  return (
+    <div className="skill-card">
+      <p className="skill-card-label">{label}</p>
+      <h3 className="heading-section">{title}</h3>
+      <p className="text-muted">{description}</p>
+      <div className="tech-pills">
+        {primaryPills.map((pill) => (
+          <span key={pill} className="pill pill-primary">
+            {pill}
+          </span>
+        ))}
+        {secondaryPills.map((pill) => (
+          <span key={pill} className="pill">
+            {pill}
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 export default function Skills() {
   return (
-    <div id="two" className="flex flex-col bg-[#ffff] ">
-      <section className="flex w-full flex-col items-start">
-        <div className="w-full flex flex-row-reverse">
-          <p className="p-5 text-3xl font-bold border-2 border-black text-black">
-            PROJECT
-          </p>
-          <div className="border-b-2 border-black w-full bg-[#fed000]"></div>
-        </div>
-      </section>
-      <section className="p-10 bg-[#ffff] flex flex-col items-center">
-        <div className="flex w-3/5 items-center  mb-10">
-          <p className="font-light md:text-lg lg:text-2xl text-center  text-black">
-            Over the past year I learned a lot of web technologies on client
-            side, server side, database, tools etc . This a list project i
-            participated as backend or frontend.
-          </p>
-        </div>
-        <div className=" grid lg:grid-cols-4 md:grid-cols-2 w-[80%] gap-10 grid-cols-1 grid-flow mt-10">
-          {!project ? (
-            <></>
-          ) : (
-            project.data.map((data) => {
-              return (
-                <Card
-                  url={data.url}
-                  name={data.name}
-                  description={data.description}
-                  stack={data.languages}
-                  icon={data.icon}
-                />
-              );
-            })
-          )}
-        </div>
-      </section>
-    </div>
+    <section className="section animate-fadeUp delay-3">
+      <p className="section-label">// Core Competencies</p>
+      <div className="skills-grid">
+        {skillsData.map((skill) => (
+          <SkillCard
+            key={skill.title}
+            label={skill.label}
+            title={skill.title}
+            description={skill.description}
+            primaryPills={skill.primaryPills}
+            secondaryPills={skill.secondaryPills}
+          />
+        ))}
+      </div>
+    </section>
   );
 }
