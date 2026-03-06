@@ -22,7 +22,7 @@ export default function Hero() {
         <span className="years-badge">3 yrs experience</span>
       </div>
       <p className="tagline">
-        Disrupting the industry by writing code that occasionally runs.
+        Professional JSON mover. I take JSON from here and put it over there.
       </p>
     </header>
   );
